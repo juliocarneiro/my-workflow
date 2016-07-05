@@ -34,4 +34,4 @@ npm install
 
 gulp server <- inicia server e browsersync
 
-gulp watch <- inicia watcher do stylus
+gulp stylus <- inicia watcher do stylus
