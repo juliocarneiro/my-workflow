@@ -8,7 +8,6 @@ Este é um padrão de workflow que criei para agilizar em meus projetos, vou atu
 - AngularJS 1.5.x
 - Flexbox Grid 6.3.0
 - Font-Awesome
-- Node HTTP-Server
 - Gulp
 
 Stylus for CSS
