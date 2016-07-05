@@ -1,8 +1,18 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
+var stylus 		= require('gulp-stylus');
 var reload      = browserSync.reload;
 
-gulp.task('serve', function () {
+gulp.task('stylus', function(){  
+  gulp.src('./css/style.styl')
+  .pipe(stylus())
+  .pipe(gulp.dest('./css/'));
+});
+gulp.task('watch', function(){
+  	gulp.watch('**/*.styl', ['stylus']);
+});
+
+gulp.task('server', function () {
     browserSync.init({
         server: {
             baseDir: "./"
