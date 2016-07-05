@@ -32,8 +32,6 @@ Stylus for CSS
 
 npm install
 
-gulp serve
+gulp server <- inicia server e browsersync
 
-stylus -w stylus.styl
-
-stylus -w -c stylus.styl (minified compile)
+gulp watch <- inicia watcher do stylus
