@@ -36,4 +36,5 @@ npm install
 gulp serve
 
 stylus -w stylus.styl
+
 stylus -w -c stylus.styl (minified compile)
