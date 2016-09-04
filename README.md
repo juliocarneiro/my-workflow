@@ -5,18 +5,19 @@ Este é um padrão de workflow que criei para agilizar em meus projetos, vou atu
 
 ## Default
 
-- AngularJS 1.5.x
+- jQuery 3
 - Flexbox Grid 6.3.0
 - Font-Awesome
 - Gulp
 
-Stylus for CSS
+Sass como pré-processador CSS
 
 ## Arquivos
 
   - css
-    - style.styl
     - style.css
+  - sass
+  	- style.scss
   - fonts
   - img
   - js
@@ -34,4 +35,4 @@ npm install
 
 gulp server <- inicia server e browsersync
 
-gulp stylus <- inicia watcher do stylus
+gulp sass <- inicia watcher do sass
