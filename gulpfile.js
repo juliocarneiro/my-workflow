@@ -1,22 +1,34 @@
-var gulp        = require('gulp');
-var sass      = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var reload      = browserSync.reload;
-
-gulp.task('sass', function() {
-    gulp.src('sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'));
-        gulp.watch('sass/**/*.scss',['sass']);
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    imagemin    = require('gulp-imagemin'),
+    changed     = require('gulp-changed'),
+    browserSync = require('browser-sync');
+ 
+gulp.task('sass', function () {
+    gulp.src('./sass/*.scss')
+        .pipe(sass({compass: true}))
+        .on('error', function (err) { console.log(err.message); })
+        .pipe(gulp.dest('./css'));
 });
-
-gulp.task('server', function () {
-    browserSync.init({
+ 
+gulp.task('jpg', function() {
+    gulp.src('./img/**/*.jpg')
+        .pipe(changed('./img/'))
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('./img/'));
+});
+ 
+gulp.task('browser-sync', function() {
+    browserSync.init(['./css/**'], {
         server: {
-            baseDir: "./"
+            baseDir: './',
+            index: './index.html'
         }
     });
-    gulp.watch("css/*.css").on("change", reload);
-    gulp.watch("*.html").on("change", reload);
-    gulp.watch("js/*.js").on("change", reload);
+});
+ 
+gulp.task('watch', ['sass', 'browser-sync'], function () {
+    gulp.watch('./sass/**/*.scss', ['sass']);
 });

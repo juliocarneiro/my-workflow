@@ -5,7 +5,7 @@ $colorTwo:black;
 
 header {
 	background-color:$colorTwo;
-	padding:20px!important;
+	padding:20px;
 	color:$colorOne;
 	.name{
 		font-family: $fjalla;
@@ -15,7 +15,7 @@ header {
 		font-family: $alegreya;
 		text-decoration: none;
 		&:hover {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 	} 
 	nav {
@@ -37,7 +37,7 @@ header {
 	.quadro {
 		display: none;
 		background-color:$colorTwo;
-		padding:20px;
+		padding:200px;
 		color:white;
 		font-family: $alegreya;
 	}
