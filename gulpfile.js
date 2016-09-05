@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync');
  
 gulp.task('sass', function () {
-    gulp.src('./sass/*.scss')
+    gulp.src('./sass/style.scss')
         .pipe(sass({compass: true}))
         .on('error', function (err) { console.log(err.message); })
         .pipe(gulp.dest('./css'));
@@ -21,7 +21,7 @@ gulp.task('jpg', function() {
 });
  
 gulp.task('browser-sync', function() {
-    browserSync.init(['./css/**'], {
+    browserSync.init(['./*.html', './css/*.css', './js/*.js'], {
         server: {
             baseDir: './',
             index: './index.html'
