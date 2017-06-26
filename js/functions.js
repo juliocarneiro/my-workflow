@@ -1,12 +1,8 @@
 (function(){
-	$('nav a').hover(function(){
-		$('.quadro').stop().slideToggle('fast');
+	$('nav a, .quadro').mouseover(function(){
+		$('.quadro').stop().fadeIn('fast');
 	});
-
-	var maxH = 0;
-	$(".quadro").each(function(i) {
-		var actH = $(this).height();
-		if(actH > maxH) maxH = actH;
+	$('nav a, .quadro').mouseleave(function(){
+		$('.quadro').stop().fadeOut('fast');
 	});
-	$(".quadro").height(maxH);
 })();
