@@ -4,11 +4,10 @@ Este é um padrão de workflow que criei para agilizar em meus projetos, vou atu
 ## Default
 
 - jQuery 3
-- Flexbox Grid 6.3.0
+- Bootstrap Grid
 - Font-Awesome
-- Gulp
 
-Sass como pré-processador CSS
+Sass como pré-processador CSS compilado com o gulp.
 
 ## Arquivos
 
