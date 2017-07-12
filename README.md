@@ -1,5 +1,3 @@
-![CSCore Logo](http://ap.imagensbrasil.org/images/my-workflow.png)
-
 # MY-WORKFLOW
 Este é um padrão de workflow que criei para agilizar em meus projetos, vou atualizar conforme o meu trabalho mudar.
 
@@ -33,6 +31,4 @@ Sass como pré-processador CSS
 
 npm install
 
-gulp server <- inicia server e browsersync
-
-gulp sass <- inicia watcher do sass
+gulp watch server <- inicia server, watcher do sass e browsersync
