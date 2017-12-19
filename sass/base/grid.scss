@@ -1,0 +1,187 @@
+//BREAKPOINTS
+$breakpoints: (
+	"phone":        400px,
+	"phone-wide":   480px,
+	"phablet":      560px,
+	"tablet-small": 640px,
+	"tablet":       768px,
+	"tablet-wide":  1024px,
+	"desktop":      1248px,
+	"desktop-wide": 1440px,
+	"desktop-submenu": 1200px,
+);
+@mixin mq($width, $type: max) {
+	@if map_has_key($breakpoints, $width) {
+			$width: map_get($breakpoints, $width);
+			@if $type == max {
+					$width: $width - 1px;
+			}
+			@media only screen and (#{$type}-width: $width) {
+					@content;
+			}
+	}
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+//GRID
+@-ms-viewport {
+    width: device-width;
+  }
+  
+  .container,
+  .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .container {
+    width: 100%; /*mobile first*/
+    padding-left: 24px; /*-15 do gutter = 15px*/
+    padding-right: 24px; /*-15 do gutter = 15px*/
+  }
+  
+  .row {
+    margin-right: -12px;
+    margin-left: -13px;
+  }
+  
+  /*clearfix*/
+  
+  .clearfix,
+  .row:before,
+  .row:after,
+  .container:before,
+  .container:after,
+  .container-fluid:before,
+  .container-fluid:after {
+    display: table;
+    content: "";
+  }
+  .clearfix,
+  .row:after,
+  .container:after,
+  .container-fluid:after {
+    clear: both;
+  }
+  /*clearfix*/
+  
+  .col,
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 12px;
+    padding-left: 12px;
+    float:left;
+    width: 100%;
+  }
+  
+  /*mobile first*/
+  .col-1 { width:25%; }
+  .col-2 { width:50%; }
+  
+  .hidden-sm {
+    display: none;
+  }
+  
+  .text-center-sm {
+    text-align: center;
+  }
+  
+  .text-sm-center { text-align: center; }
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  
+  .container.full {
+    padding: 0 12px;
+  }
+  
+  /*tablet*/
+  @media (min-width: 641px) {
+    .container {
+      max-width: 1200px;
+      padding-left: 22px; /*-12 do gutter = 60px*/
+      padding-right: 22px; /*-12 do gutter = 60px*/
+    }
+  
+    .hidden-sm {
+      display: inline-block;
+    }
+  
+    .hidden-lg {
+      display: none;
+    }
+  
+    .text-center-sm {
+      text-align: left;
+    }
+  
+    .text-lg-center { text-align: center; }
+    .text-lg-left { text-align: left; }
+    .text-lg-right { text-align: right; }
+    
+  }
+  
+  /*pc*/
+  @media (min-width: 1100px) {
+    .col-1 { width:8.333333%; }
+    .col-2 { width:16.666667%; }
+    .col-3 { width:25%; }
+    .col-4 { width:33.333333%; }
+    .col-5 { width:41.666667%; }
+    .col-6 { width:50%; }
+    .col-7 { width:58.333333%; }
+    .col-8 { width:66.666667%; }
+    .col-9 { width:75%; }
+    .col-10 { width:83.333333%; }
+    .col-11 { width:91.666667%; }
+    .col-12 { width:100%; }
+  
+    .container {
+      padding-left: 72px; /*-12 do gutter = 60px*/
+      padding-right: 72px; /*-12 do gutter = 60px*/
+    }
+  }
+
+  .floatcenter {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .floatright {
+    float: right;
+  }
+  
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,400,700');
+
+$montserrat: 'Montserrat', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+/*reset to font: em*/
+html { font-size: 62.5%; }
+
+.font,
+.heading {
+    font-family: $opensans;
+    margin: 0;
+    line-height: 120%;
+}
+.font {
+    display: inline-block;
+}
+
+h1.heading,
+h2.heading {
+    font-family: $montserrat;
+}
+
+h1.heading {
+    font-size: 6.0em;
+    font-weight: 700;    
+}
+h2.heading {
+    font-size: 4.5em;
+    font-weight: 700;    
+}
+h3.heading {
+    font-size: 3.0em;
+    font-weight: 400;    
+}
+h4.heading {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+h5.heading {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.font.size14 {
+    font-size: 14px;
+    font-weight: 100;
+}
+.font.size15 {
+    font-size: 15px;
+    font-weight: 100;
+}
+.font.size20 {
+    font-size: 20px;
+    font-weight: 100;
+}
+.font.size30 {
+    font-size: 30px;
+    font-weight: 100;
+}
+.font.size40 {
+    font-size: 40px;
+    font-weight: 100;
+}
+.font.size60 {
+    font-size: 60px;
+    font-weight: 100;
+}
+.font.size90 {
+    font-size: 90px;
+    font-weight: 100;
+}
+
+.text-justify {
+    text-align: justify!important
+}
+.text-nowrap {
+    white-space: nowrap!important
+}
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.text-left {
+    text-align: left!important
+}
+.text-right {
+    text-align: right!important
+}
+.text-center {
+    text-align: center!important
+}
+@media (min-width: 576px) {
+    .text-sm-left {
+        text-align: left!important
+    }
+    .text-sm-right {
+        text-align: right!important
+    }
+    .text-sm-center {
+        text-align: center!important
+    }
+}
+@media (min-width: 768px) {
+    .text-md-left {
+        text-align: left!important
+    }
+    .text-md-right {
+        text-align: right!important
+    }
+    .text-md-center {
+        text-align: center!important
+    }
+}
+@media (min-width: 992px) {
+    .text-lg-left {
+        text-align: left!important
+    }
+    .text-lg-right {
+        text-align: right!important
+    }
+    .text-lg-center {
+        text-align: center!important
+    }
+}
+@media (min-width: 1200px) {
+    .text-xl-left {
+        text-align: left!important
+    }
+    .text-xl-right {
+        text-align: right!important
+    }
+    .text-xl-center {
+        text-align: center!important
+    }
+}
+.text-lowercase {
+    text-transform: lowercase!important
+}
+.text-uppercase {
+    text-transform: uppercase!important
+}
+.text-capitalize {
+    text-transform: capitalize!important
+}

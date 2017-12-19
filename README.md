@@ -7,27 +7,10 @@ Este é um padrão de workflow que criei para agilizar em meus projetos, vou atu
 - Bootstrap Grid
 - Font-Awesome
 
-Sass como pré-processador CSS compilado com o gulp.
-
-## Arquivos
-
-  - css
-    - style.css
-  - sass
-  	- style.scss
-  - fonts
-  - img
-  - js
-    - functions.js
-
-- index.html
-- gulpfile.js
-- .gitignore
-- package.json
-- README.md
+SASS como pré-processador CSS compilado com o gulp.
 
 ## Instalar o projeto e iniciar o servidor
 
 npm install
 
-gulp watch server <- inicia server, watcher do sass e browsersync
+gulp watch <- inicia server, watcher do sass, browsersync, css-min, img-min
